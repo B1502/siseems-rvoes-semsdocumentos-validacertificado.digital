@@ -1,0 +1,124 @@
+# Simple workflow for deploying static content to GitHub Pages
+name: Deploy static content to Pages
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["main"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: really
+
+jobs:
+  # Single deploy job since we're just deploying
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload entire repository
+          path: '.'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        <ul id="projects-collection" class="collection">
+ <li class="collection-item">
+<div class="row">
+<div class="col s6">
+<p class="collections-title">Folio digital:</p><p class="collections-content">
+IEMS-239087123</p></div></div></li>
+
+<li class="collection-item">
+<div class="row">
+<div class="col s6">
+<p class="collections-title">Tipo de documento:</p><p class="collections-content">
+TERMINACIÓN</p></div></div></li>
+
+<li class="collection-item">
+<div class="row">
+<div class="col s6">
+<p class="collections-title">Estatus:</p><p class="collections-content">
+REGISTRADO</p></div></div></li>
+
+<li class="collection-item">
+<div class="row">
+<div class="col s6">
+<p class="collections-title">Nombre:</p><p class="collections-content">
+JULIO CESAR GUEVARA NARANJOS    </p></div></div></li>
+
+<li class="collection-item">
+<div class="row">
+<div class="col s12">
+<p class="collections-title">Autoridad emisora:</p><p class="collections-content">
+UNIVERSIDAD DEL VALLE DE MÉXICO</p></div></div></li>
+
+
+
+
+
+<li class="collection-item">
+<div class="row">
+<div class="col s6">
+<p class="collections-title">Plan de estudios:</p><p class="collections-content">
+LICENCIATURA EN ADMINISTRACIÓN DE EMPRESAS</p></div></div></li>
+
+<li class="collection-item">
+<div class="row">
+<div class="col s6">
+<p class="collections-title">Promedio:</p><p class="collections-content">
+9.2<br>  </p></div></div></li>
+
+<li class="collection-item">
+<div class="row">
+<div class="col s6">
+<p class="collections-title">Fecha registro SIGED:</p><p class="collections-content">
+25/09/2024</p></div></div></li><li class="collection-item">
+<div class="row">
+<div class="col s6">
+<p class="collections-title">Fecha emision:</p><p class="collections-content">
+25/09/2024</p></div></div></li>
+
+<li class="collection-item">
+<div class="row">
+<div class="col s6">
+<p class="collections-title">Entidad federativa:</p><p class="collections-content">
+Ciudad de México</p></div></div></li>
+
+ 
+
+<li class="collection-item">
+<div class="row">
+<div class="col s6">
+<p class="collections-title">Estatus del documento:</p><p class="collections-content">
+REGISTRADO</p></div></div></li>
+
+
+<li class="collection-item">
+<div class="row">
+<div class="col s6">
+<p class="collections-title">
+
+<a class="btn" href="https://alumnos.siged.mx/SIGED/documentos.php?folio=UVM-76038740">Validar Folio en SIGED</a></p></div></div></li>
+
+
+</ul>
